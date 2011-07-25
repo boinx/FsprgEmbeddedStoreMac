@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		460325DB1158B1FC00A5554B /* IsSecureIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 460325D91158B1FC00A5554B /* IsSecureIcon.png */; };
 		4684D97F114A32F500CFE920 /* APPL.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4684D97E114A32F500CFE920 /* APPL.icns */; };
-		46A03C3A1152F117005B8EA0 /* FsprgEmbeddedStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.framework */; };
-		46A03C3D1152F12A005B8EA0 /* FsprgEmbeddedStore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.framework */; };
 		46A649D61148DA0300B31C85 /* AppController.h in Headers */ = {isa = PBXBuildFile; fileRef = 46A649D41148DA0300B31C85 /* AppController.h */; };
 		46A649D71148DA0300B31C85 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A649D51148DA0300B31C85 /* AppController.m */; };
 		46A64A081148DE6600B31C85 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A64A071148DE6600B31C85 /* WebKit.framework */; };
@@ -41,7 +39,33 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E18E71C813DD773E005E9734 /* FsprgEmbeddedStore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E18E71C513DD7675005E9734 /* FsprgEmbeddedStore.framework */; };
+		E18E71C913DD7743005E9734 /* FsprgEmbeddedStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18E71C513DD7675005E9734 /* FsprgEmbeddedStore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E18E71C413DD7675005E9734 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = FsprgEmbeddedStore;
+		};
+		E18E71C613DD7675005E9734 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46886BA011478162000BC887;
+			remoteInfo = UnitTests;
+		};
+		E18E71CA13DD77A6005E9734 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = FsprgEmbeddedStore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		46A649D21148D9DF00B31C85 /* Copy Frameworks */ = {
@@ -50,7 +74,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				46A03C3D1152F12A005B8EA0 /* FsprgEmbeddedStore.framework in Copy Frameworks */,
+				E18E71C813DD773E005E9734 /* FsprgEmbeddedStore.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +92,7 @@
 		32CA4F630368D1EE00C91783 /* Example2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example2_Prefix.pch; sourceTree = "<group>"; };
 		460325D91158B1FC00A5554B /* IsSecureIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IsSecureIcon.png; sourceTree = "<group>"; };
 		4684D97E114A32F500CFE920 /* APPL.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = APPL.icns; sourceTree = "<group>"; };
-		46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FsprgEmbeddedStore.framework; path = "../FsprgEmbeddedStore/build/Release 10.5+/FsprgEmbeddedStore.framework"; sourceTree = SOURCE_ROOT; };
+		46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FsprgEmbeddedStore.xcodeproj; path = ../FsprgEmbeddedStore/FsprgEmbeddedStore.xcodeproj; sourceTree = SOURCE_ROOT; };
 		46A649D41148DA0300B31C85 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		46A649D51148DA0300B31C85 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		46A64A071148DE6600B31C85 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -106,8 +130,8 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				46A64A081148DE6600B31C85 /* WebKit.framework in Frameworks */,
+				E18E71C913DD7743005E9734 /* FsprgEmbeddedStore.framework in Frameworks */,
 				46A64AAE1148EB1300B31C85 /* libicucore.dylib in Frameworks */,
-				46A03C3A1152F117005B8EA0 /* FsprgEmbeddedStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +153,7 @@
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 				46A64A071148DE6600B31C85 /* WebKit.framework */,
-				46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.framework */,
+				46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.xcodeproj */,
 				46A64AAD1148EB1300B31C85 /* libicucore.dylib */,
 			);
 			name = "Linked Frameworks";
@@ -248,6 +272,15 @@
 			name = DeepMutableCopy;
 			sourceTree = SOURCE_ROOT;
 		};
+		E18E71C013DD7675005E9734 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E18E71C513DD7675005E9734 /* FsprgEmbeddedStore.framework */,
+				E18E71C713DD7675005E9734 /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -285,6 +318,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E18E71CB13DD77A6005E9734 /* PBXTargetDependency */,
 			);
 			name = Example2;
 			productInstallPath = "$(HOME)/Applications";
@@ -312,12 +346,35 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Example2 */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E18E71C013DD7675005E9734 /* Products */;
+					ProjectRef = 46A03C391152F117005B8EA0 /* FsprgEmbeddedStore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Example2 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E18E71C513DD7675005E9734 /* FsprgEmbeddedStore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FsprgEmbeddedStore.framework;
+			remoteRef = E18E71C413DD7675005E9734 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E18E71C713DD7675005E9734 /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = E18E71C613DD7675005E9734 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D1107290486CEB800E47090 /* Resources */ = {
@@ -357,6 +414,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E18E71CB13DD77A6005E9734 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FsprgEmbeddedStore;
+			targetProxy = E18E71CA13DD77A6005E9734 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -393,6 +458,7 @@
 				GCC_PREFIX_HEADER = Example2_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Example2;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -412,6 +478,7 @@
 				GCC_PREFIX_HEADER = Example2_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = Example2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -424,7 +491,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Debug;
 		};
@@ -437,7 +504,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Release;
 		};
