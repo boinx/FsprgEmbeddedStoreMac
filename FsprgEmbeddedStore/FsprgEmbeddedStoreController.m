@@ -170,14 +170,26 @@
 	}
 	
 	float windowHeight = [[self webView] frame].size.height;
-	float pageNavigationHeight = [[[[self webView] windowScriptObject] evaluateWebScript:@"document.getElementsByClassName('store-page-navigation')[0].clientHeight"] floatValue];
+	float pageNavigationHeight = 0.0f;
 	
-	DOMCSSStyleDeclaration *cssStyle = [[self webView] computedStyleForElement:resizableContentE pseudoElement:nil];	
-	float paddingTop = [[[cssStyle paddingBottom] substringToIndex:[[cssStyle paddingTop] length]-2] floatValue];
-	float paddingBottom = [[[cssStyle paddingBottom] substringToIndex:[[cssStyle paddingBottom] length]-2] floatValue];
+	WebScriptObject *windowScript = [[self webView] windowScriptObject];
+	id scriptingObject = [windowScript evaluateWebScript:@"document.getElementsByClassName('store-page-navigation')[0].clientHeight"];
 	
-	float newHeight = windowHeight - paddingTop - paddingBottom - pageNavigationHeight;
-	[[resizableContentE style] setHeight:[NSString stringWithFormat:@"%fpx", newHeight]];
+	if (! [scriptingObject isEqual:[WebUndefined undefined]])
+	{
+		pageNavigationHeight = [scriptingObject floatValue];
+		
+		DOMCSSStyleDeclaration *cssStyle = [[self webView] computedStyleForElement:resizableContentE pseudoElement:nil];	
+		float paddingTop = [[[cssStyle paddingBottom] substringToIndex:[[cssStyle paddingTop] length]-2] floatValue];
+		float paddingBottom = [[[cssStyle paddingBottom] substringToIndex:[[cssStyle paddingBottom] length]-2] floatValue];
+		
+		float newHeight = windowHeight - paddingTop - paddingBottom - pageNavigationHeight;
+		[[resizableContentE style] setHeight:[NSString stringWithFormat:@"%fpx", newHeight]];
+	}
+	else
+	{
+		NSLog(@"script could not be evaluated %@", windowScript);
+	}
 }
 
 - (void)webViewFrameChanged:(NSNotification *)aNotification
