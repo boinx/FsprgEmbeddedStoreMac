@@ -464,6 +464,7 @@
 			baseConfigurationReference = E1F79C2813E8197200B13F5D /* BXProject.xcconfig */;
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
@@ -472,6 +473,7 @@
 			baseConfigurationReference = E1F79C2813E8197200B13F5D /* BXProject.xcconfig */;
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};
