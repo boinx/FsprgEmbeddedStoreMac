@@ -208,8 +208,6 @@
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
-	NSLog(@"content %@", [sender mainFrameDocument]);
-	
 	if ([self runningOnLionOrHigher])
 	{
 		NSScrollView* scrollView = [[[[webView mainFrame] frameView] documentView] enclosingScrollView];
