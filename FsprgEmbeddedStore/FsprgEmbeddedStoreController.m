@@ -18,6 +18,8 @@
 - (void)setStoreHost:(NSString *)aHost;
 - (void)resizeContentDivE;
 - (void)webViewFrameChanged:(NSNotification *)aNotification;
+
+- (BOOL)runningOnLionOrHigher;
 @end
 
 @implementation FsprgEmbeddedStoreController
@@ -206,6 +208,14 @@
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
+	NSLog(@"content %@", [sender mainFrameDocument]);
+	
+	if ([self runningOnLionOrHigher])
+	{
+		NSScrollView* scrollView = [[[[webView mainFrame] frameView] documentView] enclosingScrollView];
+		[scrollView performSelector:@selector(flashScrollers)];
+	}
+	
 	[self setIsSecure:TRUE]; // just triggering change observer
 
 	[self resizeContentDivE];
@@ -264,6 +274,17 @@
 	
 	return subWebView;
 }
+
+
+- (BOOL)runningOnLionOrHigher
+{
+	SInt32 versionMajor,versionMinor/*,versionBugFix*/;
+	Gestalt(gestaltSystemVersionMajor,&versionMajor);
+	Gestalt(gestaltSystemVersionMinor,&versionMinor);
+	return versionMajor >= 10 && versionMinor >= 7;
+}
+
+
 
 - (void)dealloc
 {
