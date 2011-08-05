@@ -116,8 +116,9 @@ static NSString * const kParams = @"params";
 {
 }
 
-- (NSView *)viewWithFrame:(NSRect)frame forOrder:(FsprgOrder *)order
+- (NSView *)viewWithFrame:(NSValue *)frameRectValue forOrder:(FsprgOrder *)order
 {
+	NSRect frame = [frameRectValue rectValue];
 	NSString *errorDesc = nil;
 	NSData *data = [NSPropertyListSerialization dataFromPropertyList:[order raw] 
 															  format:NSPropertyListXMLFormat_v1_0 

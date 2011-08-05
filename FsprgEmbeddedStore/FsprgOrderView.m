@@ -70,7 +70,13 @@
 		FsprgOrder *order = [representation order];
 
 		FsprgEmbeddedStoreController *delegate = [[[[self dataSource] webFrame] webView] UIDelegate];
-		NSView *newSubview = [[delegate delegate] viewWithFrame:[self frame] forOrder:order];
+		id delegatesDelegate = [delegate delegate];
+		NSView *newSubview = nil;
+		if ([delegatesDelegate respondsToSelector:@selector(viewWithFrame:forOrder:)])
+		{
+			newSubview = [delegatesDelegate performSelector:@selector(viewWithFrame:forOrder:) withObject:[NSValue valueWithRect:[self frame]] withObject:order];
+		}
+		
 		[self addSubview:newSubview];
 	}
 }

@@ -44,11 +44,11 @@ typedef enum {
 
 /*!
  * Gets called to present the order confirmation.
- * @param frame The frame rectangle for the view object
+ * @param frameRectValue The frame rectangle for the view object wrapped into a NSValue
  * @param order Order information
  * @result The view presenting the order confirmation
  */
-- (NSView *)viewWithFrame:(NSRect)frame forOrder:(FsprgOrder *)order;
+- (NSView *)viewWithFrame:(NSValue *)frameRectValue forOrder:(FsprgOrder *)order;
 
 /*!
  * Invoked if an error occurs when starting to load data for a page.
