@@ -220,22 +220,38 @@
 	
 	NSURL *newURL = [[[frame dataSource] request] URL];
 	NSString *newStoreHost;
-	if ([@"file" isEqualTo:[newURL scheme]]) {
+	if ([@"file" isEqualTo:[newURL scheme]]) 
+	{
 		newStoreHost = @"file";
-	} else {
+	} 
+	else
+	{
 		newStoreHost = [newURL host];
 	}
 	
-	if([self storeHost] == nil) {
+	if([self storeHost] == nil) 
+	{
 		[self setStoreHost:newStoreHost];
 		[[self delegate] didLoadStore:newURL];
-	} else {
+	} 
+	else
+	{
 		FsprgPageType newPageType;
-		if([newStoreHost isEqualTo:[self storeHost]]) {
+		if([newStoreHost isEqualTo:[self storeHost]]) 
+		{
 			newPageType = FsprgPageFS;
-		} else if([newStoreHost hasSuffix:@"paypal.com"]) {
+			if ([delegate respondsToSelector:@selector(setDOMDocument:)])
+			{
+				DOMDocument *mainDocument = [webView mainFrameDocument];
+				[delegate performSelector:@selector(setDOMDocument:) withObject:mainDocument];
+			}
+		}
+		else if([newStoreHost hasSuffix:@"paypal.com"]) 
+		{
 			newPageType = FsprgPagePayPal;
-		} else {
+		}
+		else
+		{
 			newPageType = FsprgPageUnknown;
 		}
 		[[self delegate] didLoadPage:newURL ofType:newPageType];
