@@ -123,9 +123,9 @@ static NSMutableDictionary *keyPathsForValuesAffecting;
 		if([self hasContactDefaults]) {
 			protocol = @"https";
 		}
-		urlAsStr = [NSString stringWithFormat:@"%@://sites.fastspring.com/%@/product/%@", protocol, storeIdEncoded, productIdEncoded];
+		urlAsStr = [NSString stringWithFormat:@"%@://%@/%@/product/%@", STORE_HOST, protocol, storeIdEncoded, productIdEncoded];
 	} else if([kFsprgOrderProcessInstant isEqualTo:[self orderProcessType]]) {
-		urlAsStr = [NSString stringWithFormat:@"https://sites.fastspring.com/%@/instant/%@", storeIdEncoded, productIdEncoded];
+		urlAsStr = [NSString stringWithFormat:@"https://%@/%@/instant/%@", STORE_HOST, storeIdEncoded, productIdEncoded];
 	} else {
 		NSAssert1(FALSE, @"OrderProcessType '%@' unknown.", [self orderProcessType]);
 	}

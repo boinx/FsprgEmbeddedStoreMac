@@ -20,12 +20,15 @@
 	NSString *storeHost;
 }
 
++ (NSURL *)storeURL;
+
 - (WebView *)webView;
 /*!
  * Connects this controller to a web view.
  * @param aWebView Web view to connect.
  */
 - (void)setWebView:(WebView *)aWebView;
+
 
 - (id <FsprgEmbeddedStoreDelegate>)delegate;
 /*!

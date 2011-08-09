@@ -34,6 +34,24 @@
 				   forMIMEType:@"application/xml"];
 }
 
++ (NSURL *)storeURL
+{
+	NSURL *resultURL = nil;
+	
+	NSString *urlString = [NSString stringWithFormat:@"http://%@", STORE_HOST];
+	if (urlString)
+	{
+		resultURL = [NSURL URLWithString:urlString];
+		
+	}
+	else
+	{
+		NSAssert(YES, @"Could not create store URL for FastSpring store.");
+	}
+		
+	return resultURL;
+}
+
 - (id) init
 {
 	self = [super init];

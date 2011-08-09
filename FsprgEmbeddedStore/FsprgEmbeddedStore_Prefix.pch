@@ -13,3 +13,6 @@
 	typedef int NSInteger;
 	typedef unsigned int NSUInteger;
 #endif
+
+
+#define STORE_HOST @"sites.fastspring.com"
