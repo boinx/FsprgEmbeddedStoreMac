@@ -123,7 +123,7 @@ static NSMutableDictionary *keyPathsForValuesAffecting;
 		if([self hasContactDefaults]) {
 			protocol = @"https";
 		}
-		urlAsStr = [NSString stringWithFormat:@"%@://%@/%@/product/%@", STORE_HOST, protocol, storeIdEncoded, productIdEncoded];
+		urlAsStr = [NSString stringWithFormat:@"%@://%@/%@/product/%@", protocol, STORE_HOST, storeIdEncoded, productIdEncoded];
 	} else if([kFsprgOrderProcessInstant isEqualTo:[self orderProcessType]]) {
 		urlAsStr = [NSString stringWithFormat:@"https://%@/%@/instant/%@", STORE_HOST, storeIdEncoded, productIdEncoded];
 	} else {
