@@ -23,19 +23,7 @@ typedef enum {
  */
 @protocol FsprgEmbeddedStoreDelegate <NSObject>
 
-/*!
- * Gets called on initial load of the store.
- * @param url URL of the loaded store
- */
-- (void)didLoadStore:(NSURL *)url;
-
-/*!
- * Gets called on subsequent page loads.
- * @param url URL of the loaded page
- * @param pageType Type of page this url is pointing to
- */
-- (void)didLoadPage:(NSURL *)url ofType:(FsprgPageType)pageType;
-
+@optional
 /*!
  * Gets called after finishing the order process.
  * @param order Order information
@@ -49,6 +37,20 @@ typedef enum {
  * @result The view presenting the order confirmation
  */
 - (NSView *)viewWithFrame:(NSValue *)frameRectValue forOrder:(FsprgOrder *)order;
+
+@required
+/*!
+ * Gets called on initial load of the store.
+ * @param url URL of the loaded store
+ */
+- (void)didLoadStore:(NSURL *)url;
+
+/*!
+ * Gets called on subsequent page loads.
+ * @param url URL of the loaded page
+ * @param pageType Type of page this url is pointing to
+ */
+- (void)didLoadPage:(NSURL *)url ofType:(FsprgPageType)pageType;
 
 /*!
  * Invoked if an error occurs when starting to load data for a page.
