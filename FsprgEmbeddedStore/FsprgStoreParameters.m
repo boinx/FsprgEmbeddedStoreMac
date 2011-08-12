@@ -15,21 +15,21 @@ NSString * const kFsprgModeActive = @"active";
 NSString * const kFsprgModeActiveTest = @"active.test";
 NSString * const kFsprgModeTest = @"test";
 
-static NSString * const kLanguage = @"language";
-static NSString * const kOrderProcessType = @"orderProcessType";
-static NSString * const kStoreId = @"storeId";
-static NSString * const kProductId = @"productId";
-static NSString * const kMode = @"mode";
-static NSString * const kCampaign = @"campaign";
-static NSString * const kOption = @"option";
-static NSString * const kReferrer = @"referrer";
-static NSString * const kSource = @"source";
-static NSString * const kCoupon = @"coupon";
-static NSString * const kContactFname = @"contact_fname";
-static NSString * const kContactLname = @"contact_lname";
-static NSString * const kContactEmail = @"contact_email";
-static NSString * const kContactCompany = @"contact_company";
-static NSString * const kContactPhone = @"contact_phone";
+NSString * const kLanguage = @"language";
+NSString * const kOrderProcessType = @"orderProcessType";
+NSString * const kStoreId = @"storeId";
+NSString * const kProductId = @"productId";
+NSString * const kMode = @"mode";
+NSString * const kCampaign = @"campaign";
+NSString * const kOption = @"option";
+NSString * const kReferrer = @"referrer";
+NSString * const kSource = @"source";
+NSString * const kCoupon = @"coupon";
+NSString * const kContactFname = @"contact_fname";
+NSString * const kContactLname = @"contact_lname";
+NSString * const kContactEmail = @"contact_email";
+NSString * const kContactCompany = @"contact_company";
+NSString * const kContactPhone = @"contact_phone";
 
 static NSMutableDictionary *keyPathsForValuesAffecting; 
 

@@ -17,6 +17,23 @@ extern NSString * const kFsprgModeActive;
 extern NSString * const kFsprgModeActiveTest;
 extern NSString * const kFsprgModeTest;
 
+/* Constants for parameters: */
+extern NSString * const kLanguage;
+extern NSString * const kOrderProcessType;
+extern NSString * const kStoreId;
+extern NSString * const kProductId;
+extern NSString * const kMode;
+extern NSString * const kCampaign;
+extern NSString * const kOption;
+extern NSString * const kReferrer;
+extern NSString * const kSource;
+extern NSString * const kCoupon;
+extern NSString * const kContactFname;
+extern NSString * const kContactLname;
+extern NSString * const kContactEmail;
+extern NSString * const kContactCompany;
+extern NSString * const kContactPhone;
+
 
 /*!
  * FastSpring store parameters. FsprgStoreParameters is backed by a NSMutableDictionary that
