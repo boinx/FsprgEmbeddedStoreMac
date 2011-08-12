@@ -28,10 +28,7 @@
 {
 	[WebView registerViewClass:[FsprgOrderView class]
 		   representationClass:[FsprgOrderDocumentRepresentation class]
-				   forMIMEType:@"text/xml"];
-	[WebView registerViewClass:[FsprgOrderView class]
-		   representationClass:[FsprgOrderDocumentRepresentation class]
-				   forMIMEType:@"application/xml"];
+				   forMIMEType:@"application/x-fsprgorder+xml"];
 }
 
 + (NSURL *)storeURL
@@ -84,7 +81,7 @@
 			[webView setPostsFrameChangedNotifications:TRUE];
 			[webView setFrameLoadDelegate:self];
 			[webView setUIDelegate:self];
-			[webView setApplicationNameForUserAgent:@"FSEmbeddedStore/1.0"];
+			[webView setApplicationNameForUserAgent:@"FSEmbeddedStore/2.0"];
 			[[NSNotificationCenter defaultCenter] addObserver:self 
 													 selector:@selector(webViewFrameChanged:) 
 														 name:NSViewFrameDidChangeNotification 
@@ -135,8 +132,12 @@
 {
 	[self setStoreHost:nil];
 
-	NSString *fileURL = [NSString stringWithFormat:@"file://%@", aPath];
-	[[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:fileURL]]];
+	NSData *data = [NSData dataWithContentsOfFile:aPath];
+	if(data == nil) {
+		NSLog(@"File %@ not found.", aPath);
+	} else {
+		[[webView mainFrame] loadData:data MIMEType:@"application/x-fsprgorder+xml" textEncodingName:@"UTF-8" baseURL:nil];
+	}
 }
 
 - (BOOL)isLoading
