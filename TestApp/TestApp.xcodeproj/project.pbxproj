@@ -80,7 +80,7 @@
 		46F4DFB6113EDD7C00ECAFE6 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = SOURCE_ROOT; };
 		46F4DFB7113EDD7C00ECAFE6 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = SOURCE_ROOT; };
 		46F4DFB8113EDD7C00ECAFE6 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = SOURCE_ROOT; };
-		46F4E1871140383E00ECAFE6 /* toolbarPreview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbarPreview.png; path = "../../../Documents/Cocoa/Classic_Icons/!PNG/32/toolbarPreview.png"; sourceTree = SOURCE_ROOT; };
+		46F4E1871140383E00ECAFE6 /* toolbarPreview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbarPreview.png; sourceTree = SOURCE_ROOT; };
 		46F4E2591140675000ECAFE6 /* OrderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderView.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
