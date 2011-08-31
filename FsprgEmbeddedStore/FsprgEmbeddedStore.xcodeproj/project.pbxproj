@@ -45,7 +45,6 @@
 		46886C791147A76D000BC887 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DC2EF5A0486A6940098B216 /* Info.plist */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		E18CA51F140E386300E90FD1 /* RightClick.js in Sources */ = {isa = PBXBuildFile; fileRef = E18CA51E140E386300E90FD1 /* RightClick.js */; };
 		E18CA53F140E3A7800E90FD1 /* RightClick.js in Resources */ = {isa = PBXBuildFile; fileRef = E18CA51E140E386300E90FD1 /* RightClick.js */; };
 		E1F79C2C13E8197200B13F5D /* BXProject.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E1F79C2813E8197200B13F5D /* BXProject.xcconfig */; };
 		E1F79C2D13E8197200B13F5D /* BXTargetDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E1F79C2913E8197200B13F5D /* BXTargetDebug.xcconfig */; };
@@ -90,7 +89,7 @@
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FsprgEmbeddedStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FsprgEmbeddedStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
-		E18CA51E140E386300E90FD1 /* RightClick.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RightClick.js; sourceTree = "<group>"; };
+		E18CA51E140E386300E90FD1 /* RightClick.js */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; fileEncoding = 4; path = RightClick.js; sourceTree = "<group>"; };
 		E1F79C2813E8197200B13F5D /* BXProject.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXProject.xcconfig; path = ../../../BuildConfig/BXProject.xcconfig; sourceTree = "<group>"; };
 		E1F79C2913E8197200B13F5D /* BXTargetDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXTargetDebug.xcconfig; path = ../../../BuildConfig/BXTargetDebug.xcconfig; sourceTree = "<group>"; };
 		E1F79C2A13E8197200B13F5D /* BXTargetRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXTargetRelease.xcconfig; path = ../../../BuildConfig/BXTargetRelease.xcconfig; sourceTree = "<group>"; };
@@ -418,7 +417,6 @@
 				46886B6411477DF4000BC887 /* FsprgFulfillment.m in Sources */,
 				46886B6611477DF4000BC887 /* FsprgLicense.m in Sources */,
 				46886B6811477DF4000BC887 /* FsprgFileDownload.m in Sources */,
-				E18CA51F140E386300E90FD1 /* RightClick.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
