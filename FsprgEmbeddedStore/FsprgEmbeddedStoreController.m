@@ -237,6 +237,11 @@
 
 	[self resizeContentDivE];
 	
+	NSURL *scriptURL = [[NSBundle bundleForClass:[self class]] URLForResource:@"RightClick" withExtension:@"js"];
+	NSString *injectionScript = [NSString stringWithContentsOfURL:scriptURL encoding:NSUTF8StringEncoding error:nil];
+	
+	[sender stringByEvaluatingJavaScriptFromString:injectionScript];
+	
 	NSURL *newURL = [[[frame dataSource] request] URL];
 	NSString *newStoreHost;
 	if ([@"file" isEqualTo:[newURL scheme]]) 
