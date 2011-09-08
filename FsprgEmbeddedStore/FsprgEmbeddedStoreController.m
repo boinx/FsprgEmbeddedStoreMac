@@ -240,20 +240,9 @@
 		[frameworkDelegate performSelector:@selector(webView:didFinishLoadForFrame:) withObject:sender withObject:frame];
 	}
 	
-	if ([self runningOnLionOrHigher])
-	{
-		NSScrollView* scrollView = [[[[webView mainFrame] frameView] documentView] enclosingScrollView];
-		[scrollView performSelector:@selector(flashScrollers)];
-	}
-	
 	[self setIsSecure:TRUE]; // just triggering change observer
 
 	[self resizeContentDivE];
-	
-	NSURL *scriptURL = [[NSBundle bundleForClass:[self class]] URLForResource:@"RightClick" withExtension:@"js"];
-	NSString *injectionScript = [NSString stringWithContentsOfURL:scriptURL encoding:NSUTF8StringEncoding error:nil];
-	
-	[sender stringByEvaluatingJavaScriptFromString:injectionScript];
 	
 	NSURL *newURL = [[[frame dataSource] request] URL];
 	NSString *newStoreHost;
@@ -343,15 +332,6 @@
 
 
 #pragma mark -
-
-- (BOOL)runningOnLionOrHigher
-{
-	SInt32 versionMajor,versionMinor/*,versionBugFix*/;
-	Gestalt(gestaltSystemVersionMajor,&versionMajor);
-	Gestalt(gestaltSystemVersionMinor,&versionMinor);
-	return versionMajor >= 10 && versionMinor >= 7;
-}
-
 
 - (void)dealloc
 {
