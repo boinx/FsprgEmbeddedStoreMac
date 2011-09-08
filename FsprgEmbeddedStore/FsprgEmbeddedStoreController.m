@@ -223,10 +223,23 @@
 
 - (void)webView:(WebView *)sender didStartProvisionalLoadForFrame:(WebFrame *)frame
 {
+	id frameworkDelegate = [self delegate];
+	
+	if ([frameworkDelegate respondsToSelector:@selector(webView:didStartProvisionalLoadForFrame:)])
+	{
+		[frameworkDelegate performSelector:@selector(webView:didStartProvisionalLoadForFrame:) withObject:sender withObject:frame];
+	}
 }
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame
 {
+	id frameworkDelegate = [self delegate];
+	
+	if ([frameworkDelegate respondsToSelector:@selector(webView:didFinishLoadForFrame:)])
+	{
+		[frameworkDelegate performSelector:@selector(webView:didFinishLoadForFrame:) withObject:sender withObject:frame];
+	}
+	
 	if ([self runningOnLionOrHigher])
 	{
 		NSScrollView* scrollView = [[[[webView mainFrame] frameView] documentView] enclosingScrollView];
@@ -284,15 +297,29 @@
 
 - (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame
 {
-	[[self delegate] webView:sender didFailProvisionalLoadWithError:error forFrame:frame];
+	id frameworkDelegate = [self delegate];
+	
+	if ([frameworkDelegate respondsToSelector:@selector(webView:didFailProvisionalLoadWithError:forFrame:)])
+	{
+		[frameworkDelegate webView:sender didFailProvisionalLoadWithError:error forFrame:frame];
+	}
 }
 
 - (void)webView:(WebView *)sender didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame
 {
-	[[self delegate] webView:sender didFailLoadWithError:error forFrame:frame];
+	id frameworkDelegate = [self delegate];
+	
+	if ([frameworkDelegate respondsToSelector:@selector(webView:didFailLoadWithError:forFrame:)])
+	{
+		[frameworkDelegate webView:sender didFailLoadWithError:error forFrame:frame];
+	}
 }
 
-// WebUIDelegate
+
+
+// web UI delegate
+
+// not in use, because we are pointing web UI Delegate to our own class – i.e. delegate of this class
 
 - (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame
 {
@@ -314,6 +341,9 @@
 }
 
 
+
+#pragma mark -
+
 - (BOOL)runningOnLionOrHigher
 {
 	SInt32 versionMajor,versionMinor/*,versionBugFix*/;
@@ -321,7 +351,6 @@
 	Gestalt(gestaltSystemVersionMinor,&versionMinor);
 	return versionMajor >= 10 && versionMinor >= 7;
 }
-
 
 
 - (void)dealloc
@@ -332,5 +361,6 @@
 	
     [super dealloc];
 }
+
 
 @end
