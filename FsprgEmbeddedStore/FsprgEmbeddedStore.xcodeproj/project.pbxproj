@@ -46,10 +46,6 @@
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		E18CA53F140E3A7800E90FD1 /* RightClick.js in Resources */ = {isa = PBXBuildFile; fileRef = E18CA51E140E386300E90FD1 /* RightClick.js */; };
-		E1F79C2C13E8197200B13F5D /* BXProject.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E1F79C2813E8197200B13F5D /* BXProject.xcconfig */; };
-		E1F79C2D13E8197200B13F5D /* BXTargetDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E1F79C2913E8197200B13F5D /* BXTargetDebug.xcconfig */; };
-		E1F79C2E13E8197200B13F5D /* BXTargetRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E1F79C2A13E8197200B13F5D /* BXTargetRelease.xcconfig */; };
-		E1F79C2F13E8197200B13F5D /* BXTargetTest.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E1F79C2B13E8197200B13F5D /* BXTargetTest.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -359,10 +355,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
-				E1F79C2C13E8197200B13F5D /* BXProject.xcconfig in Resources */,
-				E1F79C2D13E8197200B13F5D /* BXTargetDebug.xcconfig in Resources */,
-				E1F79C2E13E8197200B13F5D /* BXTargetRelease.xcconfig in Resources */,
-				E1F79C2F13E8197200B13F5D /* BXTargetTest.xcconfig in Resources */,
 				E18CA53F140E3A7800E90FD1 /* RightClick.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
