@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -82,14 +82,11 @@
 		46886BA011478162000BC887 /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46886BA111478162000BC887 /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		46886BBB114781BF000BC887 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4C94AC371512316E009BA8E4 /* BXSharedFramework.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXSharedFramework.xcconfig; path = ../../../BuildConfig/BXSharedFramework.xcconfig; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* FsprgEmbeddedStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FsprgEmbeddedStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		E18CA51E140E386300E90FD1 /* RightClick.js */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; fileEncoding = 4; path = RightClick.js; sourceTree = "<group>"; };
-		E1F79C2813E8197200B13F5D /* BXProject.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXProject.xcconfig; path = ../../../BuildConfig/BXProject.xcconfig; sourceTree = "<group>"; };
-		E1F79C2913E8197200B13F5D /* BXTargetDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXTargetDebug.xcconfig; path = ../../../BuildConfig/BXTargetDebug.xcconfig; sourceTree = "<group>"; };
-		E1F79C2A13E8197200B13F5D /* BXTargetRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXTargetRelease.xcconfig; path = ../../../BuildConfig/BXTargetRelease.xcconfig; sourceTree = "<group>"; };
-		E1F79C2B13E8197200B13F5D /* BXTargetTest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BXTargetTest.xcconfig; path = ../../../BuildConfig/BXTargetTest.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,10 +239,7 @@
 		E1F79C2613E818FF00B13F5D /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				E1F79C2813E8197200B13F5D /* BXProject.xcconfig */,
-				E1F79C2913E8197200B13F5D /* BXTargetDebug.xcconfig */,
-				E1F79C2A13E8197200B13F5D /* BXTargetRelease.xcconfig */,
-				E1F79C2B13E8197200B13F5D /* BXTargetTest.xcconfig */,
+				4C94AC371512316E009BA8E4 /* BXSharedFramework.xcconfig */,
 			);
 			name = Configuration;
 			sourceTree = "<group>";
@@ -317,10 +311,11 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = FastSpring;
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "FsprgEmbeddedStore" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -428,11 +423,11 @@
 /* Begin XCBuildConfiguration section */
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2913E8197200B13F5D /* BXTargetDebug.xcconfig */;
+			baseConfigurationReference = 4C94AC371512316E009BA8E4 /* BXSharedFramework.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_PREFIX_HEADER = FsprgEmbeddedStore_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
@@ -443,8 +438,8 @@
 		};
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2A13E8197200B13F5D /* BXTargetRelease.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PREFIX_HEADER = FsprgEmbeddedStore_Prefix.pch;
@@ -457,7 +452,6 @@
 		};
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2813E8197200B13F5D /* BXProject.xcconfig */;
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
@@ -466,7 +460,7 @@
 		};
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2813E8197200B13F5D /* BXProject.xcconfig */;
+			baseConfigurationReference = 4C94AC371512316E009BA8E4 /* BXSharedFramework.xcconfig */;
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
@@ -475,9 +469,7 @@
 		};
 		46886BA211478163000BC887 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2913E8197200B13F5D /* BXTargetDebug.xcconfig */;
 			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				INFOPLIST_FILE = "UnitTests-Info.plist";
@@ -495,9 +487,7 @@
 		};
 		46886BA311478163000BC887 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2A13E8197200B13F5D /* BXTargetRelease.xcconfig */;
 			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				INFOPLIST_FILE = "UnitTests-Info.plist";
@@ -515,7 +505,6 @@
 		};
 		E1F79C3013E81A6900B13F5D /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2813E8197200B13F5D /* BXProject.xcconfig */;
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
@@ -524,11 +513,11 @@
 		};
 		E1F79C3113E81A6900B13F5D /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2B13E8197200B13F5D /* BXTargetTest.xcconfig */;
+			baseConfigurationReference = 4C94AC371512316E009BA8E4 /* BXSharedFramework.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_PREFIX_HEADER = FsprgEmbeddedStore_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
@@ -539,9 +528,7 @@
 		};
 		E1F79C3213E81A6900B13F5D /* Test */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1F79C2B13E8197200B13F5D /* BXTargetTest.xcconfig */;
 			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
 				INFOPLIST_FILE = "UnitTests-Info.plist";
