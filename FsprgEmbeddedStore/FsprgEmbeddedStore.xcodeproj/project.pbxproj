@@ -432,6 +432,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = FsprgEmbeddedStore;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -446,6 +447,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = FsprgEmbeddedStore;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -455,6 +457,7 @@
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -464,6 +467,7 @@
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -508,6 +512,7 @@
 			buildSettings = {
 				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/$(CONTENTS_FOLDER_PATH)/$(PRODUCT_NAME)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
 			};
 			name = Test;
 		};
@@ -522,6 +527,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = FsprgEmbeddedStore;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Test;
