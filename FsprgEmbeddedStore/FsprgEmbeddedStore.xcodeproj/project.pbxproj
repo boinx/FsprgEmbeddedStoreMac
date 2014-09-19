@@ -284,7 +284,7 @@
 			name = UnitTests;
 			productName = UnitTests;
 			productReference = 46886BA011478162000BC887 /* UnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		8DC2EF4F0486A6940098B216 /* FsprgEmbeddedStore */ = {
 			isa = PBXNativeTarget;
@@ -311,8 +311,13 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = FastSpring;
+				TargetAttributes = {
+					8DC2EF4F0486A6940098B216 = {
+						DevelopmentTeam = 6372P8EH2J;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "FsprgEmbeddedStore" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -426,6 +431,8 @@
 			baseConfigurationReference = 4C94AC371512316E009BA8E4 /* BXSharedFramework.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -434,6 +441,7 @@
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = FsprgEmbeddedStore;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -443,6 +451,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -451,6 +461,7 @@
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = FsprgEmbeddedStore;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -524,6 +535,8 @@
 			baseConfigurationReference = 4C94AC371512316E009BA8E4 /* BXSharedFramework.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -532,6 +545,7 @@
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = FsprgEmbeddedStore;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
